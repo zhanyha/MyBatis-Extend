@@ -1,0 +1,5 @@
+com\zyh\mybatisframework\test\po\User.class
+com\zyh\mybatisframework\test\dao\IActivityDao.class
+com\zyh\mybatisframework\test\AppTest.class
+com\zyh\mybatisframework\test\po\Activity.class
+com\zyh\mybatisframework\test\plugin\TestPlugin.class

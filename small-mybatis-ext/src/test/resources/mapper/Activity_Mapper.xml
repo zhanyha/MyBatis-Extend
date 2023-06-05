@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyh.mybatisframework.test.dao.IActivityDao">
+
+    <resultMap id="activityMap" type="com.zyh.mybatisframework.test.po.Activity">
+        <id column="id" property="id"/>
+        <result column="activity_id" property="activityId"/>
+        <result column="activity_name" property="activityName"/>
+        <result column="activity_desc" property="activityDesc"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <dbRouter size="4" format="%03d" join="_"/>
+
+    <cache eviction="FIFO" flushInterval="600000" size="512" readOnly="true"/>
+
+    <select id="queryActivity" resultMap="activityMap">
+        SELECT *
+        FROM activity
+    </select>
+
+    <select id="queryActivityById" parameterType="com.zyh.mybatisframework.test.po.Activity" resultMap="activityMap" flushCache="false" useCache="true">
+        SELECT activity_id, activity_name, activity_desc, create_time, update_time
+        FROM activity
+        <trim prefix="where" prefixOverrides="AND | OR" suffixOverrides="and">
+            <if test="null != activityId">
+                activity_id = #{activityId}
+            </if>
+        </trim>
+    </select>
+
+    <update id="updateActivityNameById" parameterType="com.zyh.mybatisframework.test.po.Activity">
+        update activity
+        set activity_name = #{activityName}
+        where activity_id = #{activityId};
+    </update>
+
+</mapper>
