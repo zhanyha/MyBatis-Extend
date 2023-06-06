@@ -27,7 +27,7 @@ MyBatis框架麻雀虽小，五脏俱全。包含十几种设计模式，通过�
 
 ## 2 数据库分表功能
 
-1 Mapper.xml添加如下配置
+**1 Mapper.xml添加如下配置**
 
 ```xml
 <mapper namespace="com.zyh.mybatisframework.xx.dao.IActivityDao">
@@ -45,7 +45,7 @@ MyBatis框架麻雀虽小，五脏俱全。包含十几种设计模式，通过�
 
 
 
-2 DAO/Mapper接口的方法上添加@TableSelect注解
+**2 DAO/Mapper接口的方法上添加@TableSelect注解**
 
 ```java
 public interface IActivityDao {
@@ -66,7 +66,7 @@ public interface IActivityDao {
 
 
 
-3 效果
+**3 效果**
 
 ```
 21:08:46.843 [main] INFO  c.z.m.s.defaults.DefaultSqlSession - 执行查询 statement：com.zyh.mybatisframework.test.dao.IActivityDao.queryActivityById parameter：{"activityId":100001}
@@ -88,7 +88,7 @@ public interface IActivityDao {
 
 ## 3 慢sql日志记录功能
 
-1 配置开启慢sql功能，慢sql的阈值、输出文件位置等信息
+**1 配置开启慢sql功能，慢sql的阈值、输出文件位置等信息**
 
 ```xml
 <settings>
@@ -104,7 +104,7 @@ public interface IActivityDao {
 
 ## 4 内置分页插件使用方式
 
-1 配置开启分页功能
+**1 配置开启分页功能**
 
 ```xml
 <settings>
@@ -112,7 +112,7 @@ public interface IActivityDao {
 </settings>
 ```
 
-或者也可以配置分页插件
+**或者也可以配置分页插件**
 
 ```xml
 <plugins>
@@ -126,15 +126,17 @@ public interface IActivityDao {
 
 
 
-2 查询前紧跟startPage方法
+**2 查询前紧跟startPage方法**
 
 ```java
 PageSeger.startPage(int currentPage, int size);
 ```
 
+和PageHelper类似。
 
 
-3 示例代码
+
+**3 一段示例代码**
 
 ```java
 // ...
