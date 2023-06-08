@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyh.mybatisframework.step08.mapper.IUserDao">
+
+    <select id="queryUserInfoByIdAndUsername" resultType="com.zyh.mybatisframework.step08.po.User">
+        SELECT id, userId, userName, userHead
+        FROM user
+        where id = #{id, javaType=Integer} and userName = #{userName, javaType=String}
+    </select>
+
+    <select id="queryUserInfoByUsername" parameterType="java.lang.String" resultType="com.zyh.mybatisframework.step08.po.User">
+        SELECT id, userId, userName, userHead
+        FROM user
+        where userName = userName = #{userName, javaType=String}
+    </select>
+
+
+    <select id="queryUserInfoById"  resultType="com.zyh.mybatisframework.step08.po.User">
+        SELECT id, userId, userName, userHead
+        FROM user
+        where id = #{id, javaType=Integer}
+    </select>
+
+</mapper>
