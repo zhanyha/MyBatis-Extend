@@ -16,7 +16,7 @@
 
 <img src="./doc/img/mybatis-230320-02.png"/>
 
-(**如图片加载失败**：https://gitee.com/zhanyuhao/MyBatis-Extend  )
+(**如遇到图片加载失败**：https://gitee.com/zhanyuhao/MyBatis-Extend  )
 
 MyBatis框架麻雀虽小，五脏俱全。包含十几种设计模式，通过学习源码，是快速提升编程能力的有效途径。MyBatis是一款优秀的框架，并且它再适合不过那些刚刚尝试阅读一些框架源码的小伙伴们。
 
@@ -158,6 +158,8 @@ System.out.println(activities.size()); // 5
 
 ## 5 手写MyBatis实现过程
 
+下面拆解mybatis的功能，一步一步实现。
+
 ### 1. Configuration
 
 **`SqlSessionFactory.build(Reader reader)`**
@@ -174,7 +176,7 @@ System.out.println(activities.size()); // 5
 
 `XMLConfigBuilder` 解析 `mybatis-config.xml`文件
 
-目前**仅仅**解析了\<configuration>里面的\<mappers>标签
+解析\<configuration>里面的\<mappers>标签
 
 ```xml
  <configuration>
