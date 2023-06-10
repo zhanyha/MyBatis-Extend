@@ -16,6 +16,8 @@
 
 <img src="./doc/img/mybatis-230320-02.png"/>
 
+**如图片加载失败**：https://gitee.com/zhanyuhao/MyBatis-Extend
+
 MyBatis框架麻雀虽小，五脏俱全。包含十几种设计模式，通过学习源码，是快速提升编程能力的有效途径。MyBatis是一款优秀的框架，并且它再适合不过那些刚刚尝试阅读一些框架源码的小伙伴们。
 
 本项目，从`mybatis-config.xml`以及`mapper.xml`解析到数据源，事务，Mapper的动态代理，动态sql解析，执行器，结果封装，插件 等等，完整的把MyBatis的核心实现了一遍，**并在此基础上对本项目实现的MyBatis做了一些实用的拓展。**
