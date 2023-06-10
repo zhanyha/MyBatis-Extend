@@ -16,7 +16,7 @@
 
 <img src="./doc/img/mybatis-230320-02.png"/>
 
-（**如图片加载失败**：https://gitee.com/zhanyuhao/MyBatis-Extend）
+(**如图片加载失败**：https://gitee.com/zhanyuhao/MyBatis-Extend  )
 
 MyBatis框架麻雀虽小，五脏俱全。包含十几种设计模式，通过学习源码，是快速提升编程能力的有效途径。MyBatis是一款优秀的框架，并且它再适合不过那些刚刚尝试阅读一些框架源码的小伙伴们。
 
